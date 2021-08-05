@@ -54,7 +54,7 @@ A   = AAA;                  % this matrix will be fed to the rref function after
 B   = BBB;                  % same for this other matrix
 NY  = size(AAA,1);          % count the number of variables
 nshocks = size(param.sl,1); % count the number of shocks
-NK  = param.NS+1;           % count the state variables + shocks + 1
+NK  = param.NS+nshocks+1;           % count the state variables + shocks + 1
 
 D_1 = zeros((NY-NK),NK,(config.taumax-1)); % preallocate transition matrices
 G_1 = zeros(NK,NK,(config.taumax-1));
